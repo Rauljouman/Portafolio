@@ -1,0 +1,144 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+nav {
+    flex-direction: row;
+
+ }
+
+nav ul {
+    list-style: none; 
+    margin:0;
+    padding:0;
+}
+
+nav ul li{
+    margin-top: 20px;
+    }
+
+ nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    display: block;
+}
+
+li a:hover {
+    color:#00F9FF
+}
+
+.hello{
+    margin-top: 14%;
+    color: #00F9FF;
+    font-family: 'Source Code Pro', monospace;
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 15%;
+    padding: 4%;
+    background-color:  #081b36ee;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+main {
+    margin-left: 15%;
+    width: 85%;
+    text-align: left;
+    background-color: #0a192f;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+}
+
+main h1, main h2, main p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 80%;
+    border-radius: 10%;
+}
+
+main p {
+    color: rgba(245, 245, 245, 0.664);
+}
+
+h1 span {
+    font-size: 3mm; 
+}
+
+h2 {
+    font-size: 50px;
+    width: 80%;
+}
+
+.presetacion {
+    max-width: 80%;
+    margin: 0;
+}
+
+#aboutme, #experience, #projects, #contact{
+    margin-bottom: 15%;
+    margin-top: 15%;
+    border-top: 5px solid #081b36ee;
+}
+.icon {
+    margin-left: 15%;
+}
+
+.icon a {
+    display: inline-block;
+    margin: 0 10px; 
+}
+
+.icon i {
+    font-size: 24px;
+}
+
+.boton-decorado {
+    display: inline-block;
+    background-color: #00F9FF;
+    border-radius: 12px;
+    text-align: center;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-left: 15%;
+}
+
+.boton {
+    text-decoration: none;
+    color: #081b36ee;
+}
+
+.botonCV {
+    display: inline-block;
+    background-color: #00F9FF;
+    border-radius: 12px;
+    text-align: center;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+
+.dorado {
+    color: #CBBF0B;
+}
