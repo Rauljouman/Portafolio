@@ -40,7 +40,7 @@ li a:hover {
     margin-top: 14%;
     color: #00F9FF;
     font-family: 'Source Code Pro', monospace;
-    font-size: 12mm; 
+    font-size: 10mm; 
 }
 
 badge.OpenWork {
@@ -107,7 +107,7 @@ h2 {
     margin: 0;
 }
 
-#aboutme, #experience, #projects, #contact{
+#aboutme, #experience, #projects, #skills{
     margin-bottom: 15%;
     margin-top: 15%;
     border-top: 5px solid #081b36ee;
@@ -164,19 +164,19 @@ h2 {
 }
 
 .proyecto {
-    background-color: #E0F7FA; /* Color azul clarito */
-    border: 2px solid #00F9FF; /* Borde azul clarito */
+    background-color:  #081b36ee;
+    border: 2px solid #00F9FF; 
     border-radius: 10px;
     width: 250px;
     text-align: center;
-    padding: 10px; /* Ajuste del padding */
+    padding: 10px; 
     transition: transform 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alineación al principio del marco */
+    justify-content: flex-start; 
     align-items: center;
-    position: relative; /* Para manejar mejor la posición de la imagen */
-    height: 260px; /* Ajusta según el tamaño que prefieras */
+    height: 260px; 
+    position: relative; 
 }
 
 .proyecto img {
@@ -184,25 +184,117 @@ h2 {
     max-height: 150px;
     width: auto;
     height: auto;
-    margin: 0; /* Eliminamos el margen superior */
-    margin-bottom: 10px; /* Añadimos un margen inferior para separar la imagen del texto */
+    margin: 0; 
+    margin-bottom: 10px; 
 }
 
 .proyecto h3 {
     font-size: 18px;
-    margin-top: 10px; /* Ajustamos la distancia entre la imagen y el título */
-    color: #081b36; /* Color del texto del título */
+    margin-top: 10px; 
+    color: #e0e0e0;
 }
 
 .proyecto p {
     font-size: 14px;
-    color: #333; /* Color del texto de la descripción */
+    color: rgba(245, 245, 245, 0.664); 
     margin-top: 10px;
-    padding: 0 10px; /* Añadimos un pequeño padding para que el texto no toque los bordes */
+    padding: 0 10px;
 }
 
 .proyecto:hover {
-    transform: scale(1.05); /* Amplía el proyecto al hacer hover */
-    border-color: #CBBF0B; /* Cambia el borde a dorado al hacer hover */
+    transform: scale(1.05); 
+    border-color: #CBBF0B; 
 }
 
+@media (min-width: 1201px) { /* Pantalla completa (aprox. 100%) */
+    .proyectos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .proyecto {
+        width: calc(33.333% - 20px); 
+        margin: 10px; 
+        box-sizing: border-box;
+    }
+
+    .proyecto img {
+        max-height: 120px;
+    }
+
+    .proyecto h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .proyecto p {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}
+
+#skills img {
+    display: inline-block;
+    margin: 5px;
+}
+
+#skills p {
+    margin-left: 10%;  
+}
+
+@media (min-width: 768px) and (max-width: 1200px) { 
+    .proyectos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .proyecto {
+        width: calc(50% - 20px); 
+        margin: 10px; 
+        box-sizing: border-box;
+    }
+
+    .proyecto img {
+        max-height: 120px;
+    }
+
+    .proyecto h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .proyecto p {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 767px) { 
+    .proyectos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proyecto {
+        width: 60%; 
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .proyecto img {
+        max-height: 120px;
+    }
+
+    .proyecto h3 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .proyecto p {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+}
