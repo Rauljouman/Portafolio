@@ -10,8 +10,31 @@ html, body {
     box-sizing: border-box;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15vw; /* Usar unidades de vista para mantener el tamaño relativo */
+    height: 100vh; /* Altura completa de la ventana de visualización */
+    padding: 2%; /* Ajustar padding según necesidad */
+    background-color: #081b36ee;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Oculta la barra de desplazamiento en el header */
+}
+
+header img {
+    width: 100%; /* Ajustar imagen al ancho del header */
+    height: auto; /* Mantener proporción */
+    max-width: 150px; /* Tamaño máximo para evitar que la imagen sea demasiado grande */
+    border-radius: 50%; /* Si deseas bordes redondeados para la imagen */
+}
+
 nav {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos de navegación */
+    padding-top: 20px; /* Espacio superior para separar la imagen */
 }
 
 nav ul {
@@ -34,45 +57,14 @@ li a:hover {
     color: #00F9FF;
 }
 
-.hello {
-    margin-top: 14%;
-    color: #00F9FF;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 10mm; 
-}
-
-badge.OpenWork {
-    display: inline-block;
-    background-color: #2f2b7978;
-    border-radius: 5px;
-    text-align: center;
-    border: none;
-    padding: 5px 8px;
-    font-size: 12px;
-    vertical-align: middle; 
-    margin-left: 8px; 
-    color: #0a192f;
-}
-
-header {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    width: 15%;
-    padding: 4%;
-    background-color: #081b36ee;
-    text-align: center;
-    box-sizing: border-box;
-}
-
 main {
-    margin-left: 15%;
-    width: 85%;
+    margin-left: 15vw; /* Ajustar margen para el ancho del header */
+    width: 85vw; /* Ajustar el ancho restante de la ventana */
     text-align: left;
     background-color: #0a192f;
     color: #e0e0e0;
     font-family: 'Roboto', sans-serif;
+    overflow: auto; /* Permite el desplazamiento del contenido */
 }
 
 main h1, main h2, main p {
@@ -83,7 +75,6 @@ main h1, main h2, main p {
 img {
     max-width: 100%;
     height: auto;
-    margin-top: 80%;
     border-radius: 10%;
 }
 
@@ -100,7 +91,7 @@ h2 {
     width: 80%;
 }
 
-.presentacion {
+.presetacion {
     max-width: 80%;
     margin: 0;
 }
@@ -156,6 +147,25 @@ h2 {
     color: #CBBF0B;
 }
 
+.hello {
+    color: #00F9FF;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10mm; 
+}
+
+badge.OpenWork {
+    display: inline-block;
+    background-color: #2f2b7978;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    padding: 5px 8px;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-left: 8px;
+    color: #0a192f;
+}
+
 .proyectos {
     display: flex;
     justify-content: space-around;
@@ -205,7 +215,7 @@ h2 {
     border-color: #CBBF0B; 
 }
 
-@media (min-width: 1201px) { /* Pantalla completa (aprox. 100%) */
+@media (min-width: 1201px) {
     .proyectos {
         flex-direction: row;
         flex-wrap: wrap;
@@ -290,21 +300,18 @@ h2 {
 }
 
 #skills {
-    margin-top: 15%; /* Ajusta el margen superior si es necesario */
-}
-
-#skills h2 {
-    margin-bottom: 10px; /* Reduce el margen inferior del título para acercar las imágenes */
+    margin-top: 15%;
+    margin-bottom: 15%;
 }
 
 .skills-icons {
-    margin-left: 10%; /* Mantén el margen izquierdo para alinear con el texto */
-    margin-top: 0; /* Asegúrate de que no haya margen superior adicional */
-    display: flex;
-    flex-wrap: wrap; /* Asegura que las imágenes se envuelvan si es necesario */
-    gap: 10px; /* Añade espacio entre las imágenes */
+    display: flex; /* Alinea las imágenes en una fila */
+    justify-content: flex-start; /* Alinea todo el contenido hacia la izquierda */
+    margin-left: 10%; /* Aplica el margen al contenedor completo */
+    gap: 5px; /* Controla el espacio entre las imágenes */
 }
 
-.skills-icons img {
-    margin: 0; /* Elimina el margen adicional de las imágenes */
+#skills img {
+    display: inline-block;
+    height: 30px; /* Mantén un tamaño constante para las imágenes */
 }
