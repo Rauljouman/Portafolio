@@ -1,6 +1,6 @@
-//Animación de letras teclandose
 document.addEventListener('DOMContentLoaded', () => {
-    const texto = ' Mi nombre es...';
+    // Animación de letras escribiéndose
+    const texto = '¡Hola! Soy ...';
     const elemento = document.querySelector('.hello span');
     let indice = 0;
 
@@ -9,9 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             elemento.textContent += texto.charAt(indice);
             indice++;
             setTimeout(escribirTexto, 100); // Ajusta el tiempo para la velocidad de escritura
-        } else {
-            setTimeout(borrarTexto, 2000); // Espera 2 segundos antes de empezar a borrar
-        }
+        } 
     }
 
     function borrarTexto() {
@@ -25,10 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     escribirTexto();
-});
 
-//Animación de efecto para la foto de proyectos
-document.addEventListener('DOMContentLoaded', () => {
+    // Animación de efecto para la foto de proyectos
     const proyectos = document.querySelectorAll('.proyecto');
 
     proyectos.forEach(proyecto => {
@@ -44,5 +40,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
         proyecto.style.transition = 'border-color 0.3s ease, transform 0.3s ease';
     });
-});
 
+    // Configuración de ScrollReveal
+    ScrollReveal().reveal('#aboutme', {
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        opacity: 0,
+        easing: 'ease-in-out',
+        delay: 300,
+    });
+
+    ScrollReveal().reveal('#experience', {
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        opacity: 0,
+        easing: 'ease-in-out',
+        delay: 300,
+    });
+
+    ScrollReveal().reveal('#projects', {
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        opacity: 0,
+        easing: 'ease-in-out',
+        delay: 300,
+    });
+
+    ScrollReveal().reveal('#skills', {
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        opacity: 0,
+        easing: 'ease-in-out',
+        delay: 300,
+    });
+});

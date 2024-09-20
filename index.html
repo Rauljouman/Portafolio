@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Raul Ip</title>
 </head>
 
 <body>
     <div class="container">
+        <!-- Sección de encabezado -->
         <header>
-            <img src="image/raul.photo.jpeg" alt="Raul Jouman">
+            <div class="logo-container">
+                <img src="image/logoRJ.jpeg" alt="Raul Jouman" id="logo-header">
+            </div>           
             <nav>
                 <ul>
                     <li><a href="#raul">Inicio</a></li>
@@ -24,11 +29,16 @@
                 </ul>
             </nav>
         </header>
+
+        <!-- Sección principal -->
         <main>
+            <!-- Sección de bienvenida -->
             <section id="raul">
-                <h1 class="hello">¡Hola!<span> </span></h1>
-                <h2>Raul Jouman<badge class="OpenWork">Open to work</badge></h2>
+                <h1 class="hello"><span></span></h1>
+                <img src="image/yo.jpeg" alt="Foto_de_mi" class="foto_yo">
+                <h2>Raul Jouman<badge class="OpenWork">🔓Open to work</badge></h2>
                 <p class="presentacion">¡Bienvenido a mi portafolio!<br><br>Soy un joven programador que acaba de empezar en el mundo de la programación.</p>
+                <p>"Apasionado por el código, listo para enfrentar nuevos retos."</p>
                 <div class="icon">
                     <a href="https://www.linkedin.com/in/raul-jouman-ip/" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-linkedin" style="color: #FFD43B; font-size: 24px;"></i>
@@ -40,22 +50,27 @@
                         <i class="fa-solid fa-square-envelope" style="color: #FFD43B;"></i>
                     </a>
                 </div>
-                <button class="botonCV">
+                <button class="botonForma">
                     <a href="download/CVRaulJouman.pdf" download="CVRaulJouman.pdf" class="boton">Descargar CV</a>
                 </button>                         
             </section>
             
+            <!-- Sección sobre mí -->
             <section id="aboutme">
                 <h2>Sobre mí</h2>
                 <p>Desde que empecé a montar ordenadores, mi entusiasmo por la tecnología no ha dejado de crecer. Este interés me llevó de forma natural al mundo de la informática. Ahora estoy en mi segundo año del ciclo de Desarrollo de Aplicaciones Multiplataforma en Fundació Prat Educació, y cada día me doy cuenta de lo mucho que disfruto trabajando en el desarrollo Back-End. Me apasiona la idea de construir y mejorar la lógica que da vida a las aplicaciones, y estoy emocionado por todo lo que aún tengo por aprender y crear.</p>
-                <p class="dorado">ACTUALMENTE ESTUDIO Y BUSCO EMPEZAR AMPLIAR MI CAMPO LABORAL EN LA PROGRAMACIÓN.</p>
             </section>
 
+            <!-- Sección de experiencia -->
             <section id="experience">
                 <h2>Experiencia</h2>
                 <p>Aunque no tengo experiencia profesional directa todavía, estoy muy emocionado por comenzar mis prácticas y dar mis primeros pasos en el mundo laboral. Estoy en el segundo año de mis estudios en Desarrollo de Aplicaciones Multiplataforma, y estoy deseando poner en práctica todo lo que he aprendido hasta ahora. Tengo muchas ganas de aprender y crecer en un entorno real.</p>
+                <button class="botonForma">
+                    <a href="mailto:rauljouman@gmail.com" target="_blank" rel="noopener noreferrer" class="boton">¡Contactame!</a>
+                </button>   
             </section>
         
+            <!-- Sección de proyectos -->
             <section id="projects">
                 <h2>Proyectos</h2>
                 <p>Aquí te presento los tres proyectos más recientes en los que he estado trabajando con dedicación y entusiasmo. Cada uno de ellos es un reflejo de mi progreso como programador, y he puesto todo mi esfuerzo y creatividad en ellos. Espero que sean de tu agrado.</p>
@@ -92,6 +107,7 @@
                 </div>                
             </section>
         
+            <!-- Sección de habilidades -->
             <section id="skills">
                 <h2>Skills</h2>
                 <p>Lenguajes de programación:</p>
@@ -109,10 +125,15 @@
                 <p>Herramientas e IDEs:</p>
                 <div class="skills-icons">
                     <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="Visual Studio Code Badge">
-                    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge">
+                    <a href="https://github.com/Rauljouman" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge">
+                    </a>
                     <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" alt="IntelliJ Badge">
                 </div>
-            </section>            
+            </section> 
+
+            <!-- Sección de derechos de autor -->
+            <h4>&copy; 2024 Raul Jouman. Todos los derechos reservados.</h4>
         </main>
     </div>
 </body>

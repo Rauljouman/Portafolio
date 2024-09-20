@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -14,31 +18,31 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 15vw; /* Usar unidades de vista para mantener el tamaño relativo */
-    height: 100vh; /* Altura completa de la ventana de visualización */
-    padding: 2%; /* Ajustar padding según necesidad */
+    width: 15vw;
+    height: 100vh;
+    padding: 2%;
     background-color: #081b36ee;
     text-align: center;
     box-sizing: border-box;
-    overflow: hidden; /* Oculta la barra de desplazamiento en el header */
+    overflow: hidden;
 }
 
 header img {
-    width: 100%; /* Ajustar imagen al ancho del header */
-    height: auto; /* Mantener proporción */
-    max-width: 150px; /* Tamaño máximo para evitar que la imagen sea demasiado grande */
-    border-radius: 50%; /* Si deseas bordes redondeados para la imagen */
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    border-radius: 50%;
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos de navegación */
-    padding-top: 20px; /* Espacio superior para separar la imagen */
+    align-items: center;
+    padding-top: 20px;
 }
 
 nav ul {
-    list-style: none; 
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -51,20 +55,44 @@ nav a {
     color: #e0e0e0;
     text-decoration: none;
     display: block;
+    font-family: 'Source Code Pro', monospace;
 }
 
 li a:hover {
     color: #00F9FF;
 }
 
+.logo-container {
+    margin: 0%;
+}
+
+#logo-header {
+    margin-top: 45%;
+}
+
+.foto_yo {
+    float: right;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 20%;
+    margin-right: 7%;
+    filter: hue-rotate(200deg) saturate(2) brightness(0.8) opacity(0.6);
+    transition: filter 0.5s ease;
+}
+
+.foto_yo:hover {
+    filter: hue-rotate(0deg) saturate(1) brightness(1) opacity(1);
+}
+
 main {
-    margin-left: 15vw; /* Ajustar margen para el ancho del header */
-    width: 85vw; /* Ajustar el ancho restante de la ventana */
+    margin-left: 15vw;
+    width: 85vw;
     text-align: left;
     background-color: #0a192f;
     color: #e0e0e0;
     font-family: 'Roboto', sans-serif;
-    overflow: auto; /* Permite el desplazamiento del contenido */
+    overflow: auto;
 }
 
 main h1, main h2, main p {
@@ -83,12 +111,13 @@ main p {
 }
 
 h1 span {
-    font-size: 12mm; 
+    font-size: 12mm;
 }
 
 h2 {
     font-size: 50px;
     width: 80%;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .presetacion {
@@ -108,7 +137,7 @@ h2 {
 
 .icon a {
     display: inline-block;
-    margin: 0 10px; 
+    margin: 0 10px;
 }
 
 .icon i {
@@ -131,7 +160,7 @@ h2 {
     color: #081b36ee;
 }
 
-.botonCV {
+.botonForma {
     display: inline-block;
     background-color: #00F9FF;
     border-radius: 12px;
@@ -143,14 +172,10 @@ h2 {
     margin-top: 3%;
 }
 
-.dorado {
-    color: #CBBF0B;
-}
-
 .hello {
     color: #00F9FF;
     font-family: 'Source Code Pro', monospace;
-    font-size: 10mm; 
+    font-size: 10mm;
 }
 
 badge.OpenWork {
@@ -163,7 +188,7 @@ badge.OpenWork {
     font-size: 12px;
     vertical-align: middle;
     margin-left: 8px;
-    color: #0a192f;
+    color: #54719d;
 }
 
 .proyectos {
@@ -174,18 +199,18 @@ badge.OpenWork {
 
 .proyecto {
     background-color: #081b36ee;
-    border: 2px solid #00F9FF; 
+    border: 2px solid #00F9FF;
     border-radius: 10px;
     width: 250px;
     text-align: center;
-    padding: 10px; 
+    padding: 10px;
     transition: transform 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: center;
-    height: 260px; 
-    position: relative; 
+    height: 260px;
+    position: relative;
 }
 
 .proyecto img {
@@ -193,26 +218,35 @@ badge.OpenWork {
     max-height: 150px;
     width: auto;
     height: auto;
-    margin: 0; 
-    margin-bottom: 10px; 
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .proyecto h3 {
     font-size: 18px;
-    margin-top: 10px; 
+    margin-top: 10px;
     color: #e0e0e0;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .proyecto p {
     font-size: 14px;
-    color: rgba(245, 245, 245, 0.664); 
+    color: rgba(245, 245, 245, 0.664);
     margin-top: 10px;
     padding: 0 10px;
 }
 
 .proyecto:hover {
-    transform: scale(1.05); 
-    border-color: #CBBF0B; 
+    transform: scale(1.05);
+    border-color: #CBBF0B;
+}
+
+.skills-icons img {
+    transition: transform 0.3s ease;
+}
+
+.skills-icons img:hover {
+    transform: scale(1.2);
 }
 
 @media (min-width: 1201px) {
@@ -223,8 +257,8 @@ badge.OpenWork {
     }
 
     .proyecto {
-        width: calc(33.333% - 20px); 
-        margin: 10px; 
+        width: calc(33.333% - 20px);
+        margin: 10px;
         box-sizing: border-box;
     }
 
@@ -243,7 +277,28 @@ badge.OpenWork {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) { 
+#skills {
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.skills-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10%;
+    gap: 15px;
+}
+
+#skills img {
+    display: inline-block;
+    height: 30px;
+}
+
+h4 {
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
     .proyectos {
         flex-direction: row;
         flex-wrap: wrap;
@@ -251,8 +306,8 @@ badge.OpenWork {
     }
 
     .proyecto {
-        width: calc(50% - 20px); 
-        margin: 10px; 
+        width: calc(50% - 20px);
+        margin: 10px;
         box-sizing: border-box;
     }
 
@@ -271,14 +326,14 @@ badge.OpenWork {
     }
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
     .proyectos {
         flex-direction: column;
         align-items: center;
     }
 
     .proyecto {
-        width: 60%; 
+        width: 60%;
         margin-bottom: 10px;
         margin-left: 0;
         margin-right: 0;
@@ -297,21 +352,4 @@ badge.OpenWork {
         font-size: 15px;
         margin-top: 5px;
     }
-}
-
-#skills {
-    margin-top: 15%;
-    margin-bottom: 15%;
-}
-
-.skills-icons {
-    display: flex; /* Alinea las imágenes en una fila */
-    justify-content: flex-start; /* Alinea todo el contenido hacia la izquierda */
-    margin-left: 10%; /* Aplica el margen al contenedor completo */
-    gap: 5px; /* Controla el espacio entre las imágenes */
-}
-
-#skills img {
-    display: inline-block;
-    height: 30px; /* Mantén un tamaño constante para las imágenes */
 }
